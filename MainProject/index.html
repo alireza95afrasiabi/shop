@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            /* background-image:linear-gradient(45deg ,yellow , yellowgreen,rgb(122, 183, 0)); */
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        #header{
+            width: 100%;
+            height: 30vh;
+            background-color: midnightblue;
+        }
+        #header>figure{
+            width: 100%;
+            height: 100%;
+        }
+        #header>figure>img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        #pizza{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* margin-top: 30px; */
+            background-color: orange;
+            /* border: 10px solid green; */
+        }
+        #pizza>figure{
+            width: 200px;
+            height: 240px;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+        #pizza>figure>figcaption{
+            /* display: block; */
+            width: 100%;
+            height: 200px;
+            /* content: "margaritha"; */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.198);
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .4s;
+        }
+        #pizza>figure:hover>figcaption{
+            background-color: transparent;
+            color: transparent;
+        }
+        #pizza>figure>img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        #pizza>figure>button{
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .4s;
+        }
+        #pizza>figure>button:hover{
+            background-color: white;
+            color: orange;
+        }
+
+
+
+        /* End of food  */
+
+
+
+        #drinks{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* margin-top: 30px; */
+            /* border: 10px solid green; */
+            background-color: paleturquoise;
+        }
+        #drinks>figure{
+            width: 200px;
+            height: 240px;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+        #drinks>figure>figcaption{
+            /* display: block; */
+            width: 100%;
+            height: 200px;
+            /* content: "margaritha"; */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.198);
+            color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .4s;
+        }
+        #drinks>figure:hover>figcaption{
+            background-color: transparent;
+            color: transparent;
+        }
+        #drinks>figure>img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        #drinks>figure>button{
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .4s;
+        }
+        #drinks>figure>button:hover{
+            background-color: white;
+            color: paleturquoise;
+        }
+  
+
+
+        
+        /* End of drinks */
+
+
+
+        #fries{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* margin-top: 30px; */
+            /* border: 10px solid green; */
+            background-color: cadetblue;
+        }
+        #fries>figure{
+            width: 200px;
+            height: 240px;
+            /* border: 2px solid red; */
+            position: relative;
+        }
+        #fries>figure>figcaption{
+            /* display: block; */
+            width: 100%;
+            height: 200px;
+            /* content: "margaritha"; */
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.198);
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .4s;
+        }
+        #fries>figure:hover>figcaption{
+            background-color: transparent;
+            color: transparent;
+        }
+        #fries>figure>img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        #fries>figure>button{
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .4s;
+            border-radius: 10px;
+        }
+        #fries>figure>button:hover{
+            background-color: white;
+            color: cadetblue;
+        }
+
+
+        /* end of food  */
+
+
+        #box{
+            width: 100%;
+            height: 600px;
+            position: relative;
+            background-color: darkslategrey;
+        }
+        #box2{
+            width: 300px;
+            height: 450px;
+            /* background-color: red; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #list{
+            width: 300px;
+            height: 100%;
+            /* background-color:red; */
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            /* position: relative; */
+        }
+        #list>li{
+            list-style: inside;
+            margin-top: 10px;
+            /* margin-left: 10px; */
+        }
+        h2{
+            border-bottom: 1px solid white;
+        }
+        #remove{
+            position: absolute;
+            background-color: darkslategrey;
+            border-radius: 10px;
+            width: 96%;
+            height: 30px;
+            border: 2px solid white;
+            color: white;
+            bottom: 85px;
+            left: 2%;
+            transition: .4s;
+        }
+        #remove:hover{
+            background-color: white;
+            color: darkslategrey;
+        }
+        #check{
+            position: absolute;
+            background-color: darkslategrey;
+            border-radius: 10px;
+            width: 96%;
+            height: 30px;
+            border: 2px solid white;
+            color: white;
+            bottom: 50px;
+            right: 2%;
+            transition: .4s;
+        }
+        #check:hover{
+            background-color: white;
+            color: darkslategrey;
+        }
+        p{
+            position: absolute;
+            bottom: 14px;
+            left: 0;
+            padding-left: 10px;
+            font-size: 20px;
+            width: 50%;
+        }
+        section{
+            position: absolute;
+            bottom: 14px;
+            right: 0;
+            padding-left: 10px;
+            font-size: 14px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 2%;
+            width: 30%;
+            cursor: pointer;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+
+        <div id="header">
+            <figure>
+                <img src="img/header.jpg" alt="">
+            </figure>
+        </div>
+
+
+        <div id="drinks">
+            <figure>
+                <img src="img/Coca-Cola.png" alt="">
+                <button id="b4">order</button>
+                <figcaption data-name="Coca Cola 1$" id="f4">Coca-cola</figcaption>
+            </figure>                
+            <figure>
+                <img src="img/fanta.png" alt="">
+                <button id="b5">order</button>
+                <figcaption id="f5" data-name="Fanta 1$">Fanta</figcaption>
+            </figure>
+        </div>
+
+
+        <div id="pizza">
+                <figure>
+                    <img src="img/Eq_it-na_pizza-margherita_sep2005_sml.jpg" alt="">
+                    <button id="b1">order</button>
+                    <figcaption id="f1" data-name="Margaritha 10$">Margaritha</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/october20_butter-chicken-pizza-taste-165100-1.jpg" alt="">
+                    <button id="b2">order</button>
+                    <figcaption id="f2" data-name="Chiken 15$">Chicken</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/Pepperoni-Pizza.png" alt="">
+                    <button id="b3">order</button>
+                    <figcaption id="f3" data-name="Pepperoni 14$">Pepperoni</figcaption>
+                </figure>
+        </div>
+
+
+
+        <div id="fries">
+            <figure>
+                <img src="img/WINGS.jpg" alt="">
+                <button id="b6">order</button>
+                <figcaption id="f6" data-name="Buffalo Wings 9$">Buffalo Wings</figcaption>
+            </figure>
+            <figure>
+                <img src="img/French-fries-b9e3e0c.jpg" alt="">
+                <button id="b7">order</button>
+                <figcaption id="f7" data-name="French Fries 3$">French Fries</figcaption>
+            </figure>
+        </div>
+
+
+        
+        <div id="box">
+            <div id="box2">
+                <ul id="list">
+                    <h2>Bill</h2>
+                    <button id="remove">remove</button>
+                    <button id="check">check</button>
+                    <p>Total : 0$</p>
+                    <section>Pay</section>
+                </ul>
+            </div>
+        </div>
+        
+    </main>
+</body>
+<script>
+
+
+    let total = []
+
+    document.getElementById('b1').addEventListener('click', function(){
+        let name = document.getElementById('f1').getAttribute('data-name')
+        let _li = document.createElement('li')
+        _li.setAttribute('data-name', '10')
+        total.push(_li.getAttribute('data-name'))
+        console.log(total)
+        _li.innerHTML = name
+        document.getElementById('list').appendChild(_li)
+    })
+
+
+    document.getElementById('b2').addEventListener('click', function(){
+        let name = document.getElementById('f2').getAttribute('data-name')
+        let _li = document.createElement('li')
+        _li.setAttribute('data-name', '15')
+        total.push(_li.getAttribute('data-name'))
+        _li.innerHTML = name
+        document.getElementById('list').appendChild(_li)
+    })
+
+
+    document.getElementById('b3').addEventListener('click', function(){
+        let name = document.getElementById('f3').getAttribute('data-name')
+        let _li = document.createElement('li')
+        _li.setAttribute('data-name', '14')
+        total.push(_li.getAttribute('data-name'))
+        _li.innerHTML = name
+        document.getElementById('list').appendChild(_li)
+    })
+
+
+    document.getElementById('b4').addEventListener('click', function(){
+        let name = document.getElementById('f4').getAttribute('data-name')
+        let _li = document.createElement('li')
+        _li.setAttribute('data-name', '1')
+        total.push(_li.getAttribute('data-name'))
+        _li.innerHTML = name
+        document.getElementById('list').appendChild(_li)
+    })
+
+
+    document.getElementById('b5').addEventListener('click', function(){
+        let name = document.getElementById('f5').getAttribute('data-name')
+        let _li = document.createElement('li')
+        _li.setAttribute('data-name', '1')
+        total.push(_li.getAttribute('data-name'))
+        _li.innerHTML = name
+        document.getElementById('list').appendChild(_li)
+    })
+
+
+    document.getElementById('b6').addEventListener('click', function(){
+        let name = document.getElementById('f6').getAttribute('data-name')
+        let _li = document.createElement('li')
+        _li.setAttribute('data-name', '9')
+        total.push(_li.getAttribute('data-name'))
+        _li.innerHTML = name
+        document.getElementById('list').appendChild(_li)
+    })
+
+
+    document.getElementById('b7').addEventListener('click', function(){
+        let name = document.getElementById('f7').getAttribute('data-name')
+        let _li = document.createElement('li')
+        _li.setAttribute('data-name', '3')
+        total.push(_li.getAttribute('data-name'))
+        _li.innerHTML = name
+        document.getElementById('list').appendChild(_li)
+    })
+    
+
+    // Adding end 
+
+
+    document.getElementById('remove').addEventListener('click', function(){
+        let _list = document.getElementById('list')
+        _list.removeChild(_list.lastChild)
+        total.pop()
+        
+    })
+
+
+    // remove button end
+
+    // let _s = document.querySelectorAll('#list>li')
+
+    document.getElementById('check').addEventListener('click', function(){
+        
+        let last_total = Number()
+        let i 
+        // alert(total.length)
+        for(i=0 ; i < total.length ; i++){
+            last_total += Number(total[i])
+        }
+        document.getElementsByTagName('p')[0].innerHTML = 'Total : ' +last_total + '$'
+    })
+
+</script>
+</html>
